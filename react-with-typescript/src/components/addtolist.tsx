@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
-import { IState as Props } from "../App";
+//import { IState as Props } from "../App";
 
+interface Props {
+    people: {
+        name: string
+        age: number
+        img: string
+        note?: string
+    }[]
+  }
 interface IProps {
     setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>
     people: Props["people"]
@@ -86,4 +94,4 @@ const AddToList: React.FC<IProps> = ({setPeople, people}) => {
     )
 }
 
-export default AddToList
+export default AddToList;
